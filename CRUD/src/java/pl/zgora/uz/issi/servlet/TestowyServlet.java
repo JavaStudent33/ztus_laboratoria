@@ -2,21 +2,21 @@ package pl.zgora.uz.issi.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
+import javax.ejb.EJB;
 import javax.persistence.Query;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import pl.zgora.uz.issi.ejb.PracownicyBean;
 import pl.zgora.uz.issi.entities.PracownicyEntity;
 
 @WebServlet(name = "TestowyServlet", urlPatterns = {"/TestowyServlet"})
 public class TestowyServlet extends HttpServlet {
     
-    @PersistenceContext(name="CRUDPU")
-    private EntityManager entityManager;
+    @EJB
+    private PracownicyBean pracownicyBean;
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -48,10 +48,9 @@ public class TestowyServlet extends HttpServlet {
             out.println("<td>Stanowisko</td>");
             out.println("</tr>");
             
-            Query query = entityManager.createNamedQuery("PracownicyEntity.findAll");
-            for(int i=0; i<query.getResultList().size(); i++)
-            {
-                PracownicyEntity p = (PracownicyEntity) query.getResultList().get(i);
+            
+            for(PracownicyEntity p : pracownicyBean.PobierzWszystkichPracownikow()) {
+                
                 out.println("<tr>");
                 out.println("<td>"+p.getImie()+"</td>");
                 out.println("<td>"+p.getNazwisko()+"</td>");
