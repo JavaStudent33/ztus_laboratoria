@@ -1,0 +1,180 @@
+body {
+    background: url('../resources/images/background.jpg') repeat-x #f9f9f7;
+    font-family: Verdana;
+}
+
+img {
+    border:0;
+}
+
+div#page {
+    margin: 0 auto;
+    width: 900px;
+    margin-top:35px;
+    border: 1px solid #b4b0b0;
+}
+
+div#top {
+    background: #7dbe5d;
+    height: 26px;
+    color: #ffffff;
+    text-align: right;
+    font-size: 12px;
+    padding-top: 14px;
+    padding-right: 10px;
+}
+
+div#top img {
+    margin: 0 3px;
+}
+
+div#header {
+    background: url('../resources/images/header.jpg');
+    height: 200px;
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+}
+
+div#header_title {
+    color: #ffffff;
+    position:relative;
+    font-size:25px;
+    padding-left:20px;
+    top:85px;
+}
+
+div#menu {
+    background: #7dbe5d;
+    height: 40px;
+    color: #ffffff;
+    padding-left: 50px;
+}
+
+div#content {
+    background: #ffffff;
+    overflow: hidden;
+}
+
+div#menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+div#menu ul li {
+    float: left;
+    width: 200px;
+    text-align: center;
+}
+
+div#menu ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+    width: 100%;
+    padding-top:8px;
+    height: 32px;
+}
+
+div#menu ul li a:hover {
+    background: #339900;
+}
+
+div.logowanie {
+    text-align: center;
+}
+
+input.text {
+    border: 1px solid #000000;
+    margin:5px;
+}
+
+table.dane {
+    width:800px;
+    border: 1px solid #7dbe5d;
+    border-collapse: collapse;
+    margin: 30px auto;
+}
+
+table.dane td {
+    border: 1px solid #7dbe5d;
+    padding: 3px;
+}
+
+table.dane th.tytul {
+    background: #A0D089;
+    border: 1px solid #7dbe5d;
+    padding: 5px;
+}
+
+table.dane tr.wiersz1 {
+    background: #C4E1B5;
+}
+
+table.dane tr.wiersz2 {
+    background: #DCEDD3;
+}
+
+table.dane td.nazwa {
+    font-weight: bold;
+}
+
+table.dane td.opcje {
+    text-align: center;
+}
+
+h2 {
+    width: 100%;
+    text-align: center;
+    text-decoration: underline;
+}
+
+div#dodaj {
+    margin:0 auto;
+    width: 200px;
+    text-align: center;
+}
+
+div#dodaj img {
+    margin-right:7px;
+}
+
+a {
+    color: #000000;
+}
+
+a:hover {
+    color:#ff0000;
+}
+
+table.form {
+    margin: 0 auto;
+}
+
+.blad {
+    color: #ff0000;
+    background: url('../resources/images/error.png') no-repeat;
+    padding-top: 5px;
+    padding-left: 26px;
+    height: 21px;
+    display: block;
+}
+
+div#blad_log {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+input.tooltip {
+    cursor: help;
+}
+
+td.footer {
+    text-align: center;
+}
+
+td.footer a, span {
+    margin:5px;
+}
